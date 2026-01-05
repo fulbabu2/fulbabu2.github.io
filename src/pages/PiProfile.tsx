@@ -5,6 +5,12 @@ import piPhoto from '../assets/fulbabu.png';
 const PiProfile: React.FC = () => {
     return (
         <div className="people-page">
+            <div className="container">
+                <div className="page-header">
+                    <h1>Principal Investigator</h1>
+                </div>
+            </div>
+
             <div className="pi-section">
                 <div className="pi-container">
                     <div className="pi-sidebar">
@@ -44,7 +50,7 @@ const PiProfile: React.FC = () => {
                     </div>
 
                     <div className="pi-content">
-                        <h2 className="content-title">About Principal Investigator</h2>
+                        <h3 className="content-title">About</h3>
                         <div className="pi-bio">
                             <p>Dr. Mohammad F. Shaikh received his Ph.D. in Computational Biophysics from the Indian Institute of Technology Indore, where his doctoral work, under the mentorship of Dr. Parimal Kar, focused on the computational modeling of Janus kinase and the molecular basis of its inhibition.</p>
                             <p>His research expertise spans large-scale conformational changes in membrane proteins, protein-lipid interactions, molecular recognition, and computer-aided drug discovery, employing advanced molecular dynamics and machine learning techniques.</p>
