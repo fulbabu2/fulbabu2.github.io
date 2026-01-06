@@ -134,11 +134,11 @@ const allPublications: Publication[] = [
     },
     {
         id: 21,
-        title: "A plausible contribution to multiple sclerosis; presentation of antigenic myelin protein epitopes by major histocompatibility complexes",
+        title: "A plausible contributor to multiple sclerosis; presentation of antigenic myelin protein epitopes by major histocompatibility complexes",
         authors: "Jakhmola, Shweta*†; Sk, Md Fulbabu†; Chatterjee, Akash; Jain, Khushboo; Kar, Parimal*; Jha, Hem C.*",
         journal: "Computers in Biology and Medicine",
-        year: 2023,
-        url: "https://doi.org/10.1016/j.compbiomed.2023.107567"
+        year: 2022,
+        url: "https://doi.org/10.1016/j.compbiomed.2022.105856"
     },
     {
         id: 20,
