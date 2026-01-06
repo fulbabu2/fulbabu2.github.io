@@ -1,15 +1,40 @@
 import React from 'react';
 import './Gallery.css';
-import mdResult1 from '../assets/gallery/md_result_1.jpg';
+import hero1 from '../assets/hero1.png';
+import mdResult1 from '../assets/gallery/md-result-1.jpg';
+
+interface GalleryItem {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+}
 
 const Gallery: React.FC = () => {
-    // Gallery Items
-    const galleryItems = [
+    const galleryItems: GalleryItem[] = [
         {
             id: 1,
-            title: "MD result 1",
-            description: "Molecular dynamics simulation result visualizing protein-membrane interaction.",
+            title: "MD Result 1",
+            description: "Molecular Dynamics Simulation Snapshot - Membrane Protein System",
             image: mdResult1
+        },
+        {
+            id: 2,
+            title: "Simulation Setup",
+            description: "Initial system configuration",
+            image: hero1
+        },
+        {
+            id: 3,
+            title: "Trajectory Analysis",
+            description: "RMSD and RMSF calculations",
+            image: hero1
+        },
+        {
+            id: 4,
+            title: "Protein Dynamics",
+            description: "Conformational changes over time",
+            image: hero1
         }
     ];
 
