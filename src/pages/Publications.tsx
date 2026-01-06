@@ -34,20 +34,31 @@ const journalCoverMap: { [key: string]: string } = {
     "Chemometrics and Intelligent Laboratory Systems": chemometricsCover,
 };
 
-const allPublications = [
+interface Publication {
+    id: number;
+    title: string;
+    authors: string;
+    journal: string;
+    year: number;
+    url?: string;
+}
+
+const allPublications: Publication[] = [
     {
         id: 32,
         title: "Unlocking the Conformational Secrets of DYRK1A Kinase with Computational Microscope: Exploring Phosphorylation-Driven Structural Dynamics",
         authors: "Ursal, Kapil; Sk, Md Fulbabu; Mahapatra, Subhasmita; Kar, Parimal*",
         journal: "Journal of Computational Chemistry",
-        year: 2025
+        year: 2025,
+        url: "https://doi.org/10.1002/jcc.27533"
     },
     {
         id: 31,
         title: "Structure of the human dopamine transporter and mechanisms of allosteric inhibition",
         authors: "Srivastava, Dushyant; Navratna, Vikas; Tosh, Dilip K.; Chinn, Audrey; Sk, Md Fulbabu; Tajkhorshid, Emad; Jacobson, Kenneth A.; Gouaux, Eric*",
         journal: "Nature",
-        year: 2024
+        year: 2024,
+        url: "https://doi.org/10.1038/s41586-024-07739-9"
     },
     {
         id: 30,
@@ -298,8 +309,14 @@ const Publications: React.FC = () => {
                                 <div className="pub-meta">
                                     <span className="pub-journal-full">{pub.journal}</span>
                                     <span className="pub-year-full">({pub.year})</span>
-                                    <a href="#" className="pub-link">PDF</a>
-                                    <a href="#" className="pub-link">BibTeX</a>
+                                    <a
+                                        href={pub.url || `https://scholar.google.com/scholar?q=${encodeURIComponent(pub.title)}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="pub-link"
+                                    >
+                                        View Article
+                                    </a>
                                 </div>
                             </div>
                         </div>
