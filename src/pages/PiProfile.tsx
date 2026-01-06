@@ -19,7 +19,7 @@ const PiProfile: React.FC = () => {
                             <div className="sidebar-info">
                                 <h2>Dr. Md F. Shaikh</h2>
                                 <p className="pi-title">Principal Investigator</p>
-                                <p className="pi-title">Principal Investigator</p>
+
 
                                 <div className="social-links-row">
                                     <a href="https://scholar.google.com/citations?user=hH9eGJUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="social-icon sc-scholar" title="Google Scholar">
