@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './People.css';
 import piPhoto from '../assets/fulbabu.png';
 
@@ -107,19 +108,19 @@ const Team: React.FC = () => {
                 {/* PI Section - Centered Top Row */}
                 <div className="pi-highlight" style={{ display: 'flex', justifyContent: 'center', marginTop: '3rem', marginBottom: '3rem' }}>
                     <div className="member-card pi-card" style={{ maxWidth: '300px', width: '100%', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
-                        <a href={piMember.link} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                        <Link to={piMember.link!} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
                             <img
                                 src={piMember.image}
                                 alt={piMember.name}
                                 className="member-photo"
                                 style={{ width: '100%', height: '300px', objectFit: 'cover', ...piMember.photoStyle }}
                             />
-                        </a>
+                        </Link>
                         <div className="member-info" style={{ padding: '1.5rem', textAlign: 'center' }}>
-                            <a href={piMember.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <Link to={piMember.link!} style={{ textDecoration: 'none', color: 'inherit' }}>
                                 <h3 style={{ fontSize: '1.4rem', color: '#002058' }}>{piMember.name}</h3>
                                 <p className="member-role" style={{ fontSize: '1.1rem', fontWeight: 500 }}>{piMember.role}</p>
-                            </a>
+                            </Link>
                             {renderSocialLinks(piMember)}
                         </div>
                     </div>
