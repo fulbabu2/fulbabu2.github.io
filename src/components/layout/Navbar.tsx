@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import labLogo from '../../assets/lab-logo.png';
+
 import './Navbar.css';
 
 const Navbar: React.FC = () => {
@@ -43,11 +43,8 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
       <div className="container navbar-content">
         <Link to="/" className="navbar-brand">
-          <img src={labLogo} alt="Shaikh Lab Logo" className="navbar-logo" />
-          <div className="brand-text">
-            <div className="brand-title">THE SHAIKH BIOPHYSICS GROUP</div>
-            <div className="brand-subtitle">Computational Structural Biology &amp; Biophysics (CSBB)</div>
-          </div>
+          <div className="brand-title">THE SHAIKH BIOPHYSICS GROUP</div>
+          <div className="brand-subtitle">Computational Structural Biology &amp; Biophysics (CSBB)</div>
         </Link>
 
         {/* Desktop Navigation */}
