@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Gallery.css';
 import hero1 from '../assets/hero1.png';
 import mdResult1 from '../assets/gallery/md-result-1.jpg';
@@ -11,6 +11,8 @@ interface GalleryItem {
 }
 
 const Gallery: React.FC = () => {
+    const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
+
     const galleryItems: GalleryItem[] = [
         {
             id: 1,
@@ -38,6 +40,16 @@ const Gallery: React.FC = () => {
         }
     ];
 
+    const openLightbox = (item: GalleryItem) => {
+        setSelectedImage(item);
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    };
+
+    const closeLightbox = () => {
+        setSelectedImage(null);
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    };
+
     return (
         <div className="gallery-page">
             <div className="container">
@@ -48,7 +60,7 @@ const Gallery: React.FC = () => {
 
                 <div className="gallery-grid">
                     {galleryItems.map(item => (
-                        <div key={item.id} className="gallery-item">
+                        <div key={item.id} className="gallery-item" onClick={() => openLightbox(item)}>
                             <div className="gallery-image-container">
                                 <img src={item.image} alt={item.title} className="gallery-image" />
                                 <div className="gallery-overlay">
@@ -62,6 +74,19 @@ const Gallery: React.FC = () => {
                     ))}
                 </div>
             </div>
+
+            {selectedImage && (
+                <div className="lightbox-overlay" onClick={closeLightbox}>
+                    <button className="lightbox-close" onClick={closeLightbox}>&times;</button>
+                    <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+                        <img src={selectedImage.image} alt={selectedImage.title} className="lightbox-image" />
+                        <div className="lightbox-caption">
+                            <h3>{selectedImage.title}</h3>
+                            <p>{selectedImage.description}</p>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
