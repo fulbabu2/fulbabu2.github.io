@@ -327,6 +327,11 @@ const Publications: React.FC = () => {
                     />
                 </div>
 
+                <div className="author-legend" style={{ textAlign: 'center', marginBottom: '1.5rem', color: '#555', fontStyle: 'italic', fontSize: '0.9rem' }}>
+                    <span style={{ marginRight: '1.5rem' }}>* Corresponding Author</span>
+                    <span>† Equal Contribution</span>
+                </div>
+
                 <div className="publication-list-full">
                     {filteredPubs.map(pub => (
                         <div key={pub.id} className="pub-item-full">
