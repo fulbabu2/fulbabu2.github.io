@@ -17,7 +17,8 @@ const PiProfile: React.FC = () => {
                         <div className="sidebar-card">
                             <img src={piPhoto} alt="Dr. Md F. Shaikh" className="pi-photo" />
                             <div className="sidebar-info">
-                                <h2>Dr. Md F. Shaikh</h2>
+                                <h2>Dr. Mohammad F. Shaikh</h2>
+                                <p className="pi-title">Principal Investigator</p>
 
                                 <div className="social-links-row">
                                     <a href="https://scholar.google.com/citations?user=hH9eGJUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="social-icon sc-scholar" title="Google Scholar">
@@ -41,7 +42,6 @@ const PiProfile: React.FC = () => {
                     </div>
 
                     <div className="pi-content">
-                        <h3 className="content-title">About Principal Investigator</h3>
                         <div className="pi-bio">
                             <p>Dr. Mohammad F. Shaikh received his Ph.D. in Computational Biophysics from the Indian Institute of Technology Indore, where his doctoral work, under the mentorship of Dr. Parimal Kar, focused on the computational modeling of Janus kinase and the molecular basis of its inhibition.</p>
                             <p>His research expertise spans large-scale conformational changes in membrane proteins, protein-lipid interactions, molecular recognition, and computer-aided drug discovery, employing advanced molecular dynamics and machine learning techniques.</p>
