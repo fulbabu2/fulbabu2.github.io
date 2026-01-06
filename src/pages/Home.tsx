@@ -23,7 +23,7 @@ const Home: React.FC = () => {
                     <div className="news-item">
                         <span className="news-date">Sep 01, 2024</span>
                         <h4>New paper published in Nature</h4>
-                        <p>Our latest work on nanopore sequencing has been featured...</p>
+                        <p>Our latest work on human dopamine transporter has been featured...</p>
                     </div>
                 </div>
             </div>
