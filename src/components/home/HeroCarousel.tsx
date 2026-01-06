@@ -1,19 +1,44 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './HeroCarousel.css';
-import heroBg from '../../assets/hero_research.png'; // Updated background image
+import transportImg from '../../assets/research_transport.png';
+import ionChannelsImg from '../../assets/research_ion_channels.png';
+import proteinTransitionImg from '../../assets/research_protein_transition.png';
+import drugDesignImg from '../../assets/research_drug_design.png';
+import proteinDnaImg from '../../assets/research_protein_dna.png';
+import methodsImg from '../../assets/research_methods.png';
 
 const HeroCarousel: React.FC = () => {
     const slides = [
         {
-            image: heroBg,
-            title: "Advanced Drug Discovery",
-            subtitle: "Exploring molecular structures at the atomic scale"
+            image: transportImg,
+            title: "Transport Membrane Proteins",
+            subtitle: "Unraveling mechanisms of molecular transport across cell membranes"
         },
-        // Placeholder for second slide to demonstrate carousel logic
         {
-            image: heroBg,
-            title: "Molecular Dynamics Simulations",
-            subtitle: "Unraveling the physics of biological systems"
+            image: ionChannelsImg,
+            title: "Neuronal Ion Channels",
+            subtitle: "Investigating gating mechanisms and ion selectivity in neuronal channels"
+        },
+        {
+            image: proteinTransitionImg,
+            title: "Protein Conformational Transitions",
+            subtitle: "Visualizing dynamic structural changes at atomic resolution"
+        },
+        {
+            image: drugDesignImg,
+            title: "Computational Drug Design",
+            subtitle: "Accelerating therapeutics discovery through virtual screening and simulation"
+        },
+        {
+            image: proteinDnaImg,
+            title: "Protein-Nucleic Acid Interactions",
+            subtitle: "Decoding the molecular basis of gene regulation and replication"
+        },
+        {
+            image: methodsImg,
+            title: "Computational Methods Development",
+            subtitle: "Advancing biological understanding with AI and high-performance computing"
         }
     ];
 
@@ -37,7 +62,7 @@ const HeroCarousel: React.FC = () => {
                     <div className="carousel-content container">
                         <h1>{slide.title}</h1>
                         <p>{slide.subtitle}</p>
-                        <a href="/research" className="btn-primary">Learn More</a>
+                        <Link to="/research" className="btn-primary">Learn More</Link>
                     </div>
                 </div>
             ))}
