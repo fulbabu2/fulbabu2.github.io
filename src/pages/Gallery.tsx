@@ -1,16 +1,17 @@
 import React from 'react';
 import './Gallery.css';
-// Reusing hero image or using placeholders
-import hero1 from '../assets/hero1.png';
+import mdResult1 from '../assets/gallery/md_result_1.jpg';
 
 const Gallery: React.FC = () => {
-    // Generate some mock items
-    const galleryItems = Array(6).fill(null).map((_, i) => ({
-        id: i,
-        title: `Simulation Result ${i + 1}`,
-        description: "Visualizing molecular dynamics trajectory...",
-        image: hero1 // In a real app, diverse images
-    }));
+    // Gallery Items
+    const galleryItems = [
+        {
+            id: 1,
+            title: "MD result 1",
+            description: "Molecular dynamics simulation result visualizing protein-membrane interaction.",
+            image: mdResult1
+        }
+    ];
 
     return (
         <div className="gallery-page">
