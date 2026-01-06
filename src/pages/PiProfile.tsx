@@ -43,17 +43,10 @@ const PiProfile: React.FC = () => {
 
                     <div className="pi-content">
                         <div className="pi-bio">
-<<<<<<< HEAD
                             <p>Dr. Mohammad F. Shaikh earned his Ph.D. in Computational Biophysics from the Indian Institute of Technology Indore. Under the mentorship of Dr. Parimal Kar, his doctoral work focused on the computational modeling of Janus kinase and the molecular basis of its inhibition.</p>
                             <p>Dr. Shaikh’s expertise spans large-scale conformational changes in membrane proteins, protein-lipid interactions, molecular recognition, and computer-aided drug discovery, utilizing advanced molecular dynamics and machine learning techniques. His research has provided critical insights into the molecular mechanisms of protein kinases, neurotransmitter transporters, and viral proteins, addressing challenges in drug resistance, cancer, autoimmune disorders, and infectious diseases.</p>
                             <p>A prolific researcher, Dr. Shaikh has authored over 30 peer-reviewed publications, including high-impact studies in <i>Nature</i>, and has accumulated more than 700 citations with an h-index of 14. His achievements have been recognized with several honors, including the prestigious DST-INSPIRE Fellowship from the Government of India and selection as a 2024 Top Scholar by ScholarGPS, placing him in the top 0.5% of scholars worldwide.</p>
                             <p>Beyond his research, he is actively involved in scientific outreach, mentoring, and peer review, reflecting his dedication to advancing the field of biophysics and supporting the broader scientific community.</p>
-=======
-                            <p>Dr. Mohammad F. Shaikh received his Ph.D. in Computational Biophysics from the Indian Institute of Technology Indore, where his doctoral work, under the mentorship of Dr. Parimal Kar, focused on the computational modeling of Janus kinase and the molecular basis of its inhibition.</p>
-                            <p>His research expertise spans large-scale conformational changes in membrane proteins, protein-lipid interactions, molecular recognition, and computer-aided drug discovery, employing advanced molecular dynamics and machine learning techniques.</p>
-                            <p>He has authored over 30 peer-reviewed publications, including recent high-impact studies in Nature, and have accumulated more than 700 citations with an h-index of 14. His work has contributed to understanding the molecular mechanisms of protein kinases, neurotransmitter transporters, viral proteins, and drug resistance, with applications ranging from cancer and autoimmune disorders to infectious diseases.</p>
-                            <p>His achievements have been recognized with several honors, including the prestigious DST-INSPIRE Fellowship from the Government of India, selection as a 2024 Top Scholar by ScholarGPS (placing him in the top 0.5% of scholars worldwide), and best poster awards at international scientific conferences. He is also actively involved in scientific outreach, mentoring, and peer review, reflecting his dedication to advancing the field of biophysics and supporting the broader scientific community.</p>
->>>>>>> b0cde664de101f7cfb5a5c2009c019b350484d2a
                         </div>
                     </div>
                 </div>
