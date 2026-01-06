@@ -65,14 +65,16 @@ const allPublications: Publication[] = [
         title: "Dynamic Interplay of Loop Motions Governs the Molecular Level Regulatory Dynamics in Spleen Tyrosine Kinase: Insights from Molecular Dynamics Simulations",
         authors: "S. Samanta†; Sk, Md Fulbabu†; et al.",
         journal: "Journal of Physical Chemistry B",
-        year: 2024
+        year: 2024,
+        url: "https://doi.org/10.1021/acs.jpcb.4c03217"
     },
     {
         id: 29,
         title: "Deciphering the molecular choreography of Janus kinase 2 inhibition via Gaussian accelerated molecular dynamics simulations: A dynamic odyssey",
         authors: "Sk, Md Fulbabu; S. Samanta; S. Poddar; Kar, Parimal*",
         journal: "Journal of Computer-aided Molecular Design",
-        year: 2024
+        year: 2024,
+        url: "https://doi.org/10.1007/s10822-023-00548-8"
     },
     {
         id: 28,
