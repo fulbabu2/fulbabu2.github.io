@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Publications.css';
+import journalCover from '../assets/journal-cover.png';
 
 const allPublications = [
     {
@@ -256,13 +257,18 @@ const Publications: React.FC = () => {
                 <div className="publication-list-full">
                     {filteredPubs.map(pub => (
                         <div key={pub.id} className="pub-item-full">
-                            <h3 className="pub-title-full">{pub.title}</h3>
-                            <p className="pub-authors-full">{pub.authors}</p>
-                            <div className="pub-meta">
-                                <span className="pub-journal-full">{pub.journal}</span>
-                                <span className="pub-year-full">({pub.year})</span>
-                                <a href="#" className="pub-link">PDF</a>
-                                <a href="#" className="pub-link">BibTeX</a>
+                            <div className="pub-content">
+                                <h3 className="pub-title-full">{pub.title}</h3>
+                                <p className="pub-authors-full">{pub.authors}</p>
+                                <div className="pub-meta">
+                                    <span className="pub-journal-full">{pub.journal}</span>
+                                    <span className="pub-year-full">({pub.year})</span>
+                                    <a href="#" className="pub-link">PDF</a>
+                                    <a href="#" className="pub-link">BibTeX</a>
+                                </div>
+                            </div>
+                            <div className="pub-cover">
+                                <img src={journalCover} alt={`${pub.journal} Cover`} />
                             </div>
                         </div>
                     ))}
