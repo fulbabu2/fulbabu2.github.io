@@ -13,32 +13,38 @@ const HeroCarousel: React.FC = () => {
         {
             image: transportImg,
             title: "Transport Membrane Proteins",
-            subtitle: "Unraveling mechanisms of molecular transport across cell membranes"
+            subtitle: "Unraveling mechanisms of molecular transport across cell membranes",
+            animationClass: "anim-transport"
         },
         {
             image: ionChannelsImg,
             title: "Neuronal Ion Channels",
-            subtitle: "Investigating gating mechanisms and ion selectivity in neuronal channels"
+            subtitle: "Investigating gating mechanisms and ion selectivity in neuronal channels",
+            animationClass: "anim-ion"
         },
         {
             image: proteinTransitionImg,
             title: "Protein Conformational Transitions",
-            subtitle: "Visualizing dynamic structural changes at atomic resolution"
+            subtitle: "Visualizing dynamic structural changes at atomic resolution",
+            animationClass: "anim-conformation"
         },
         {
             image: drugDesignImg,
             title: "Computational Drug Design",
-            subtitle: "Accelerating therapeutics discovery through virtual screening and simulation"
+            subtitle: "Accelerating therapeutics discovery through virtual screening and simulation",
+            animationClass: "anim-docking"
         },
         {
             image: proteinDnaImg,
             title: "Protein-Nucleic Acid Interactions",
-            subtitle: "Decoding the molecular basis of gene regulation and replication"
+            subtitle: "Decoding the molecular basis of gene regulation and replication",
+            animationClass: "anim-binding"
         },
         {
             image: methodsImg,
             title: "Computational Methods Development",
-            subtitle: "Advancing biological understanding with AI and high-performance computing"
+            subtitle: "Advancing biological understanding with AI and high-performance computing",
+            animationClass: "anim-compute"
         }
     ];
 
@@ -56,7 +62,7 @@ const HeroCarousel: React.FC = () => {
             {slides.map((slide, index) => (
                 <div
                     key={index}
-                    className={`carousel-slide ${index === currentSlide ? 'active' : ''}`}
+                    className={`carousel-slide ${index === currentSlide ? 'active' : ''} ${slide.animationClass}`}
                     style={{ backgroundImage: `url(${slide.image})` }}
                 >
                     <div className="carousel-content container">

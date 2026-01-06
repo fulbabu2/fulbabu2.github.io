@@ -140,3 +140,115 @@
         font-size: 1rem;
     }
 }
+
+
+/* Animation Classes */
+
+/* 1. Transport: Horizontal Pan */
+@keyframes panHorizontal {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.anim-transport.active {
+    animation: panHorizontal 20s linear infinite alternate;
+}
+
+/* 2. Ion Channels: Pulse/Glow */
+@keyframes pulseGlow {
+    0% {
+        filter: brightness(0.8) contrast(1.1);
+        transform: scale(1);
+    }
+
+    50% {
+        filter: brightness(1.1) contrast(1.2);
+        transform: scale(1.02);
+    }
+
+    100% {
+        filter: brightness(0.8) contrast(1.1);
+        transform: scale(1);
+    }
+}
+
+.anim-ion.active {
+    animation: pulseGlow 8s ease-in-out infinite;
+}
+
+/* 3. Conformation: Breathing Scale */
+@keyframes breatheScale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.anim-conformation.active {
+    animation: breatheScale 10s ease-in-out infinite;
+}
+
+/* 4. Drug Design: Zoom In (Docking) */
+@keyframes zoomDocking {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.15);
+    }
+}
+
+.anim-docking.active {
+    animation: zoomDocking 10s linear infinite alternate;
+}
+
+/* 5. Binding: Focus/Steady Zoom */
+@keyframes focusBinding {
+    0% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.anim-binding.active {
+    animation: focusBinding 12s ease-out infinite alternate;
+}
+
+/* 6. Methods: Diagonal Drift */
+@keyframes diagonalDrift {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 20% 20%;
+    }
+}
+
+.anim-compute.active {
+    animation: diagonalDrift 15s linear infinite alternate;
+}
+
+/* Ensure background covers and centers properly for animations */
+.carousel-slide {
+    background-size: 110%;
+    /* Slight zoom to allow for movement */
+    background-position: center;
+    transition: opacity 1s ease-in-out;
+}
