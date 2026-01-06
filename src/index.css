@@ -1,15 +1,19 @@
 :root {
-  --color-primary: #002058; /* Deep Blue header - University inspired */
-  --color-secondary: #E84A27; /* Orange accent - optional, mostly for highlights */
-  --color-accent: #0066cc;  /* Brighter blue for links */
+  --color-primary: #002058;
+  /* Deep Blue header - University inspired */
+  --color-secondary: #E84A27;
+  /* Orange accent - optional, mostly for highlights */
+  --color-accent: #0066cc;
+  /* Brighter blue for links */
   --color-text-main: #333333;
   --color-text-light: #666666;
   --color-bg-light: #ffffff;
   --color-bg-offset: #f4f4f4;
   --color-border: #dddddd;
   --font-main: 'Roboto', 'Segoe UI', Tahoma, sans-serif;
-  
-  --spacing-container: 1100px; /* Standard academic width */
+
+  --spacing-container: 1100px;
+  /* Standard academic width */
   --header-height: 80px;
 }
 
@@ -19,17 +23,33 @@
   padding: 0;
 }
 
+html {
+  /* Improve text rendering across platforms */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 body {
   font-family: var(--font-main);
   background-color: var(--color-bg-light);
   color: var(--color-text-main);
   line-height: 1.6;
+  /* Prevent horizontal scroll on mobile */
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
   color: inherit;
   transition: color 0.2s;
+  /* Improve touch targets */
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -39,5 +59,43 @@ a {
 }
 
 /* Utility */
-.text-primary { color: var(--color-primary); }
-.text-accent { color: var(--color-accent); }
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+/* ============================
+   RESPONSIVE BREAKPOINTS 
+   ============================ */
+
+/* Tablet */
+@media (max-width: 900px) {
+  :root {
+    --spacing-container: 100%;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 70px;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 400px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+}

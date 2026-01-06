@@ -92,3 +92,61 @@
     color: var(--color-text-light);
     font-style: italic;
 }
+
+/* ============================
+   RESPONSIVE BREAKPOINTS 
+   ============================ */
+
+@media (max-width: 768px) {
+    .publications-page {
+        padding: 2rem 0;
+    }
+
+    .search-bar {
+        margin: 0 auto 2rem;
+        padding: 0 1rem;
+    }
+
+    .search-bar input {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .publication-list-full {
+        padding: 0 0.5rem;
+    }
+
+    .pub-item-full {
+        padding: 1.25rem;
+    }
+
+    .pub-title-full {
+        font-size: 1.05rem;
+    }
+
+    .pub-authors-full {
+        font-size: 0.9rem;
+    }
+
+    .pub-meta {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .pub-link {
+        font-size: 0.75rem;
+        padding: 3px 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pub-item-full {
+        padding: 1rem;
+    }
+
+    .pub-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+    }
+}

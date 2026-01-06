@@ -89,3 +89,57 @@
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
+
+/* ============================
+   RESPONSIVE BREAKPOINTS 
+   ============================ */
+
+@media (max-width: 768px) {
+    .research-page {
+        padding: 2rem 0;
+    }
+
+    .page-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .lead-text {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .research-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .research-card {
+        padding: 1.5rem;
+    }
+
+    .research-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .methodology-section {
+        padding: 2rem 1.5rem;
+    }
+
+    .methodology-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .research-card {
+        padding: 1.25rem;
+    }
+
+    .research-image-container {
+        height: 160px;
+    }
+}

@@ -131,3 +131,236 @@
         transform: translateX(-50%) translateY(0);
     }
 }
+
+/* ============================
+   HAMBURGER BUTTON 
+   ============================ */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1100;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.hamburger-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+/* Hamburger to X animation */
+.hamburger-btn.open .hamburger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-btn.open .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-btn.open .hamburger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ============================
+   MOBILE MENU OVERLAY 
+   ============================ */
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+}
+
+.mobile-menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ============================
+   MOBILE NAVIGATION PANEL 
+   ============================ */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    max-width: 85vw;
+    height: 100vh;
+    height: 100dvh;
+    /* Dynamic viewport height for mobile browsers */
+    background: var(--color-primary);
+    z-index: 1050;
+    padding: calc(var(--header-height) + 1rem) 0 2rem;
+    transition: right 0.3s ease;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mobile-nav.open {
+    right: 0;
+}
+
+.mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-links li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-links>li>a,
+.mobile-dropdown-trigger {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: left;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.mobile-nav-links>li>a:hover,
+.mobile-nav-links>li>a.active,
+.mobile-dropdown-trigger:hover,
+.mobile-dropdown-trigger.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-secondary);
+}
+
+/* Mobile Dropdown */
+.mobile-dropdown-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-arrow {
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+}
+
+.mobile-dropdown.open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.15);
+    transition: max-height 0.3s ease;
+}
+
+.mobile-dropdown.open .mobile-dropdown-menu {
+    max-height: 200px;
+}
+
+.mobile-dropdown-menu a {
+    display: block;
+    padding: 0.8rem 2rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.mobile-dropdown-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-secondary);
+}
+
+/* ============================
+   RESPONSIVE BREAKPOINTS 
+   ============================ */
+
+/* Tablet and below */
+@media (max-width: 900px) {
+    .navbar-links {
+        gap: 1.5rem;
+    }
+
+    .brand-title {
+        font-size: 1.3rem;
+    }
+
+    .brand-subtitle {
+        font-size: 0.75rem;
+    }
+}
+
+/* Mobile - Show hamburger menu */
+@media (max-width: 768px) {
+    .navbar {
+        height: 70px;
+    }
+
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .hamburger-btn {
+        display: flex;
+    }
+
+    .mobile-menu-overlay {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    .brand-title {
+        font-size: 1.1rem;
+    }
+
+    .brand-subtitle {
+        font-size: 0.7rem;
+    }
+
+    .navbar-brand {
+        max-width: calc(100% - 60px);
+    }
+}
+
+/* Small mobile */
+@media (max-width: 400px) {
+    .brand-title {
+        font-size: 0.95rem;
+    }
+
+    .brand-subtitle {
+        font-size: 0.65rem;
+    }
+}

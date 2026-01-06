@@ -98,10 +98,45 @@
 
 @media (max-width: 768px) {
     .hero-carousel {
-        height: 400px;
+        height: 350px;
     }
 
     .carousel-content h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
+    }
+
+    .carousel-content p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .carousel-content {
+        padding: 0 1rem;
+        max-width: 100%;
+    }
+
+    .btn-primary {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .carousel-indicators button {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .hero-carousel {
+        height: 300px;
+    }
+
+    .carousel-content h1 {
+        font-size: 1.4rem;
+    }
+
+    .carousel-content p {
+        font-size: 1rem;
     }
 }
