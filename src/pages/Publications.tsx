@@ -1,6 +1,38 @@
 import React, { useState } from 'react';
 import './Publications.css';
 import journalCover from '../assets/journal-cover.png';
+import natureCover from '../assets/covers/cover_nature.png';
+import jccCover from '../assets/covers/cover_j_comp_chem.png';
+import jpcbCover from '../assets/covers/cover_jpc_b.png';
+import jbsdCover from '../assets/covers/cover_jbsd.png';
+import sarCover from '../assets/covers/cover_sar_qsar.png';
+import acsOmegaCover from '../assets/covers/cover_acs_omega.png';
+import frontiersCover from '../assets/covers/cover_frontiers_mol_bio.png';
+import acsChemNeuroCover from '../assets/covers/cover_acs_chem_neuro.png';
+import molDivCover from '../assets/covers/cover_mol_div.png';
+import compBioMedCover from '../assets/covers/cover_comp_bio_med.png';
+import compBioChemCover from '../assets/covers/cover_comp_bio_chem.png';
+import jcimCover from '../assets/covers/cover_jcim.png';
+import chemBioDrugCover from '../assets/covers/cover_chem_bio_drug.png';
+import chemometricsCover from '../assets/covers/cover_chemometrics.png';
+
+const journalCoverMap: { [key: string]: string } = {
+    "Nature": natureCover,
+    "Journal of Computational Chemistry": jccCover,
+    "Journal of Physical Chemistry B": jpcbCover,
+    "The Journal of Physical Chemistry B": jpcbCover,
+    "Journal of Biomolecular Structure and Dynamics": jbsdCover,
+    "SAR and QSAR in Environmental Research": sarCover,
+    "ACS Omega": acsOmegaCover,
+    "Frontiers in Molecular Biosciences": frontiersCover,
+    "ACS Chemical Neuroscience": acsChemNeuroCover,
+    "Molecular Diversity": molDivCover,
+    "Computers in Biology and Medicine": compBioMedCover,
+    "Computational Biology and Chemistry": compBioChemCover,
+    "Journal of Chemical Information and Modeling": jcimCover,
+    "Chemical Biology & Drug Design": chemBioDrugCover,
+    "Chemometrics and Intelligent Laboratory Systems": chemometricsCover,
+};
 
 const allPublications = [
     {
@@ -257,6 +289,9 @@ const Publications: React.FC = () => {
                 <div className="publication-list-full">
                     {filteredPubs.map(pub => (
                         <div key={pub.id} className="pub-item-full">
+                            <div className="pub-cover">
+                                <img src={journalCoverMap[pub.journal] || journalCover} alt={`${pub.journal} Cover`} />
+                            </div>
                             <div className="pub-content">
                                 <h3 className="pub-title-full">{pub.title}</h3>
                                 <p className="pub-authors-full">{pub.authors}</p>
@@ -266,9 +301,6 @@ const Publications: React.FC = () => {
                                     <a href="#" className="pub-link">PDF</a>
                                     <a href="#" className="pub-link">BibTeX</a>
                                 </div>
-                            </div>
-                            <div className="pub-cover">
-                                <img src={journalCover} alt={`${pub.journal} Cover`} />
                             </div>
                         </div>
                     ))}

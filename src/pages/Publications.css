@@ -171,13 +171,6 @@
     }
 
     .pub-item-full {
-        flex-direction: column-reverse;
-        /* Put image on top or bottom? User said right side. On mobile maybe bottom or hidden? Lets keep it or stack it. */
-        /* Let's stack naturally: content top, image bottom? Or Image top? */
-        /* Standard is usually image top for cards, but for list items standard might be side. */
-        /* User didn't specify mobile behavior. Ill make it stack with image at bottom or just reduce size. */
-        /* Let's try column with image first if it's small, or row-reverse? */
-        /* Let's just stack straightforwardly */
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -186,8 +179,7 @@
     .pub-cover {
         flex: 0 0 auto;
         width: 120px;
-        margin-top: 1rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
     }
 
     .pub-meta {
