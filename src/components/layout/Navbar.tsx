@@ -1,50 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import labLogo from '../../assets/lab-logo.png';
 import './Navbar.css';
 
 const Navbar: React.FC = () => {
-  const location = useLocation();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [peopleDropdownOpen, setPeopleDropdownOpen] = useState(false);
-
-  const isActive = (path: string) => location.pathname === path;
-
-  // Close mobile menu when route changes
-  useEffect(() => {
-    setMobileMenuOpen(false);
-    setPeopleDropdownOpen(false);
-  }, [location.pathname]);
-
-  // Prevent body scroll when mobile menu is open
-  useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [mobileMenuOpen]);
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-    if (mobileMenuOpen) {
-      setPeopleDropdownOpen(false);
-    }
-  };
-
-  const togglePeopleDropdown = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setPeopleDropdownOpen(!peopleDropdownOpen);
-  };
-
+  // ... existing state code ...
+  // ...
   return (
     <nav className="navbar">
       <div className="container navbar-content">
         <Link to="/" className="navbar-brand">
-          <div className="brand-title">THE SHAIKH BIOPHYSICS GROUP</div>
-          <div className="brand-subtitle">Computational Structural Biology &amp; Biophysics (CSBB)</div>
+          <img src={labLogo} alt="Shaikh Lab Logo" className="navbar-logo" />
+          <div className="brand-text">
+            <div className="brand-title">THE SHAIKH BIOPHYSICS GROUP</div>
+            <div className="brand-subtitle">Computational Structural Biology &amp; Biophysics (CSBB)</div>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

@@ -19,20 +19,38 @@
 
 .navbar-brand {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.navbar-logo {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-text {
+    display: flex;
     flex-direction: column;
 }
 
 .brand-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: 0.5px;
     line-height: 1.1;
+    color: #fff;
+    white-space: nowrap;
 }
 
 .brand-subtitle {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-weight: 300;
-    opacity: 0.85;
+    opacity: 0.9;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 1px;
 }
 
 .navbar-links {
