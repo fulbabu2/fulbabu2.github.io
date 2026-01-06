@@ -99,3 +99,161 @@ img {
     padding: 0 0.75rem;
   }
 }
+/* Shared Lightbox Styles (Moved from Gallery) */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 85vh;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.lightbox-caption {
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.lightbox-caption h3 {
+    margin: 0 0 5px;
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+}
+
+.lightbox-caption p {
+    margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    color: rgba(255,255,255,0.7);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2001;
+    line-height: 1;
+    transition: all 0.2s;
+}
+
+.lightbox-close:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Rich Content Lightbox (Side-by-Side) */
+.lightbox-content.rich-content {
+    flex-direction: row;
+    max-width: 900px;
+    width: 90vw;
+    height: auto;
+    max-height: 80vh;
+    background: #fff;
+    overflow: hidden;
+}
+
+.lightbox-content.rich-content .lightbox-image {
+    width: 50%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    margin: 0;
+}
+
+.lightbox-content.rich-content .lightbox-caption {
+    width: 50%;
+    position: relative;
+    background: none;
+    color: #333;
+    padding: 2.5rem;
+    overflow-y: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lightbox-content.rich-content .lightbox-caption h3 {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.lightbox-content.rich-content .lightbox-caption p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    opacity: 1;
+    max-height: none !important; /* Override inline styles if any */
+}
+
+/* Close button for rich content */
+.lightbox-content.rich-content + .lightbox-close,
+.lightbox-overlay .lightbox-close.rich-close {
+    color: #fff;
+    top: 20px;
+    right: 30px;
+}
+
+/* Mobile Responsive Rich Lightbox */
+@media (max-width: 768px) {
+    .lightbox-content.rich-content {
+        flex-direction: column;
+        height: 90vh;
+        overflow-y: auto;
+    }
+
+    .lightbox-content.rich-content .lightbox-image {
+        width: 100%;
+        height: 250px;
+        min-height: auto;
+    }
+
+    .lightbox-content.rich-content .lightbox-caption {
+        width: 100%;
+        padding: 1.5rem;
+        height: auto;
+        display: block;
+    }
+}

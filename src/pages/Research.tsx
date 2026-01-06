@@ -8,6 +8,8 @@ import proteinDnaImg from '../assets/research_protein_dna.png';
 import methodsImg from '../assets/research_methods.png';
 
 const Research: React.FC = () => {
+    const [selectedArea, setSelectedArea] = React.useState<{ title: string; description: string; image: string } | null>(null);
+
     const researchAreas = [
         {
             title: "Transport Membrane Proteins",
@@ -41,6 +43,16 @@ const Research: React.FC = () => {
         },
     ];
 
+    const openLightbox = (area: typeof researchAreas[0]) => {
+        setSelectedArea(area);
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeLightbox = () => {
+        setSelectedArea(null);
+        document.body.style.overflow = 'auto';
+    };
+
     return (
         <div className="research-page">
             <div className="container">
@@ -52,12 +64,14 @@ const Research: React.FC = () => {
                 <div className="research-grid">
                     {researchAreas.map((area, index) => (
                         <div key={index} className="research-card">
-                            <div className="research-image-container">
+                            <div className="research-image-container" onClick={() => openLightbox(area)} style={{ cursor: 'pointer' }}>
                                 <img src={area.image} alt={area.title} className="research-image" />
                             </div>
                             <h3>{area.title}</h3>
                             <p>{area.description}</p>
-                            <a href="#" className="read-more">Read More &rarr;</a>
+                            <button className="read-more" onClick={() => openLightbox(area)} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, font: 'inherit', color: 'var(--color-secondary)' }}>
+                                Read More &rarr;
+                            </button>
                         </div>
                     ))}
                 </div>
@@ -72,6 +86,19 @@ const Research: React.FC = () => {
                     </p>
                 </div>
             </div>
+
+            {selectedArea && (
+                <div className="lightbox-overlay" onClick={closeLightbox}>
+                    <button className="lightbox-close rich-close" onClick={closeLightbox}>&times;</button>
+                    <div className="lightbox-content rich-content" onClick={(e) => e.stopPropagation()}>
+                        <img src={selectedArea.image} alt={selectedArea.title} className="lightbox-image" />
+                        <div className="lightbox-caption">
+                            <h3>{selectedArea.title}</h3>
+                            <p>{selectedArea.description}</p>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
