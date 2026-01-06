@@ -50,7 +50,7 @@ const allPublications: Publication[] = [
         authors: "Ursal, Kapil; Sk, Md Fulbabu; Mahapatra, Subhasmita; Kar, Parimal*",
         journal: "Journal of Computational Chemistry",
         year: 2025,
-        url: "https://doi.org/10.1002/jcc.27533"
+        url: "https://doi.org/10.1002/jcc.70172"
     },
     {
         id: 31,
