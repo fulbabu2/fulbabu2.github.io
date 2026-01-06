@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import HeroCarousel from '../components/home/HeroCarousel';
 import PublicationList from '../components/common/PublicationList';
 import './Home.css';
@@ -34,7 +35,7 @@ const Home: React.FC = () => {
                 </div>
                 <PublicationList limit={4} />
                 <div className="view-more">
-                    <a href="/publications">View all publications &rarr;</a>
+                    <Link to="/publications">View all publications &rarr;</Link>
                 </div>
             </div>
         </div>
