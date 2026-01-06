@@ -37,7 +37,7 @@ const Team: React.FC = () => {
 
     const groupMembers: Member[] = [
         {
-            name: "Dr. Jane Doe",
+            name: "Dr. X",
             role: "Postdoctoral Researcher",
             type: "postdoc",
             // image: postdocPhoto, // Uncomment when photo is available
@@ -49,7 +49,7 @@ const Team: React.FC = () => {
             ]
         },
         {
-            name: "John Smith",
+            name: "Y",
             role: "Graduate Student",
             type: "student",
             socialLinks: [
@@ -58,7 +58,7 @@ const Team: React.FC = () => {
             ]
         },
         {
-            name: "Emily Chen",
+            name: "Z",
             role: "Graduate Student",
             type: "student",
             socialLinks: [
@@ -66,7 +66,7 @@ const Team: React.FC = () => {
             ]
         },
         {
-            name: "Michael Brown",
+            name: "AB",
             role: "Graduate Student",
             type: "student",
             socialLinks: [
