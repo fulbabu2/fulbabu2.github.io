@@ -4,8 +4,41 @@ import labLogo from '../../assets/lab-logo.png';
 import './Navbar.css';
 
 const Navbar: React.FC = () => {
-  // ... existing state code ...
-  // ...
+  const location = useLocation();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [peopleDropdownOpen, setPeopleDropdownOpen] = useState(false);
+
+  const isActive = (path: string) => location.pathname === path;
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+    setPeopleDropdownOpen(false);
+  }, [location.pathname]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+    if (mobileMenuOpen) {
+      setPeopleDropdownOpen(false);
+    }
+  };
+
+  const togglePeopleDropdown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setPeopleDropdownOpen(!peopleDropdownOpen);
+  };
   return (
     <nav className="navbar">
       <div className="container navbar-content">
