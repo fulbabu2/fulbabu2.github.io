@@ -53,22 +53,22 @@
 }
 
 .sidebar-info {
-    padding: 1.5rem;
+    padding: 1rem;
     text-align: left;
 }
 
 .sidebar-info h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--color-primary);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.2rem;
     font-weight: 700;
 }
 
 .pi-title {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #444;
     font-weight: 500;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.8rem;
 }
 
 .pi-dept {
@@ -77,34 +77,14 @@
     margin-bottom: 1.5rem;
 }
 
-.sidebar-contact {
-    margin-bottom: 1.5rem;
-    padding-top: 1rem;
-    border-top: 1px solid #eee;
-}
-
-.email-item {
-    font-size: 0.95rem;
-    color: var(--color-text-main);
-}
-
-.email-item a {
-    color: var(--color-primary);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.email-item a:hover {
-    text-decoration: underline;
-}
-
 /* Social Links Row */
 .social-links-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
-    padding-top: 1rem;
-    border-top: 1px solid #eee;
+    gap: 0.6rem;
+    padding-top: 0;
+    border-top: none;
+    justify-content: flex-start;
 }
 
 .social-icon {
