@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import './HeroCarousel.css';
-import hero1 from '../../assets/hero1.png'; // Import the image
+import heroBg from '../../assets/hero_research.png'; // Updated background image
 
 const HeroCarousel: React.FC = () => {
     const slides = [
         {
-            image: hero1,
+            image: heroBg,
             title: "Advanced Drug Discovery",
             subtitle: "Exploring molecular structures at the atomic scale"
         },
         // Placeholder for second slide to demonstrate carousel logic
         {
-            image: hero1,
+            image: heroBg,
             title: "Molecular Dynamics Simulations",
             subtitle: "Unraveling the physics of biological systems"
         }
