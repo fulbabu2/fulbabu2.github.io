@@ -53,7 +53,7 @@ const PiProfile: React.FC = () => {
             </div>
 
             {/* Full Width Section for Education & Awards - Reverted and Aligned */}
-            <div className="profile-details-full" style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 1.5rem' }}>
+            <div className="profile-details-full">
                 <div className="profile-details">
                     <div className="profile-columns">
                         <div className="timeline-section">
