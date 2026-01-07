@@ -15,9 +15,9 @@ const PiProfile: React.FC = () => {
                 <div className="pi-container">
                     <div className="pi-sidebar">
                         <div className="sidebar-card">
-                            <img src={piPhoto} alt="Dr. Md F. Shaikh" className="pi-photo" />
+                            <img src={piPhoto} alt="Dr. Md Fulbabu Shaikh" className="pi-photo" />
                             <div className="sidebar-info">
-                                <h2>Dr. Mohammad F. Shaikh</h2>
+                                <h2>Dr. Md Fulbabu Shaikh</h2>
                                 <p className="pi-title">Principal Investigator</p>
 
                                 <div className="social-links-row">
@@ -43,7 +43,7 @@ const PiProfile: React.FC = () => {
 
                     <div className="pi-content">
                         <div className="pi-bio">
-                            <p>Dr. Mohammad F. Shaikh earned his Ph.D. in Computational Biophysics from the Indian Institute of Technology Indore. Under the mentorship of Dr. Parimal Kar, his doctoral work focused on the computational modeling of Janus kinase and the molecular basis of its inhibition. Following his doctoral studies, he served as a postdoctoral fellow in the laboratory of Prof. Emad Tajkhorshid at the Beckman Institute for Advanced Science and Technology, University of Illinois Urbana-Champaign (UIUC)</p>
+                            <p>Dr. Md Fulbabu Shaikh earned his Ph.D. in Computational Biophysics from the Indian Institute of Technology Indore. Under the mentorship of Dr. Parimal Kar, his doctoral work focused on the computational modeling of Janus kinase and the molecular basis of its inhibition. Following his doctoral studies, he served as a postdoctoral fellow in the laboratory of Prof. Emad Tajkhorshid at the Beckman Institute for Advanced Science and Technology, University of Illinois Urbana-Champaign (UIUC)</p>
                             <p>Dr. Shaikh’s expertise spans large-scale conformational changes in membrane proteins, protein-lipid interactions, molecular recognition, and computer-aided drug discovery, utilizing advanced molecular dynamics and machine learning techniques. His research has provided critical insights into the molecular mechanisms of protein kinases, neurotransmitter transporters, and viral proteins, addressing challenges in drug resistance, cancer, autoimmune disorders, and infectious diseases.</p>
                             <p>A prolific researcher, Dr. Shaikh has authored over 30 peer-reviewed publications, including high-impact studies in <i>Nature</i>, and has accumulated more than 700 citations with an h-index of 14. His achievements have been recognized with several honors, including the prestigious DST-INSPIRE Fellowship from the Government of India and selection as a 2024 Top Scholar by ScholarGPS, placing him in the top 0.5% of scholars worldwide.</p>
                             <p>Beyond his research, he is actively involved in scientific outreach, mentoring, and peer review, reflecting his dedication to advancing the field of biophysics and supporting the broader scientific community.</p>
