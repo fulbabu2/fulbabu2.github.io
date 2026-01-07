@@ -22,7 +22,7 @@ const Team: React.FC = () => {
     }
 
     const piMember: Member = {
-        name: "Dr. Md F. Shaikh",
+        name: "Dr. Md Fulbabu Shaikh",
         role: "Principal Investigator",
         type: "pi",
         image: piPhoto,
